@@ -1,0 +1,33 @@
+import React from 'react'
+import styled from 'styled-components'
+
+type ProjectPropsType = {
+
+}
+
+export const Project = (props: ) => {
+  return (
+    <StyledProjects>
+      <Title></Title>
+      <Text></Text>
+      <Link href={"#"}>View Project</Link>
+      <Image src="" alt="" />
+    </StyledProjects>
+  )
+}
+
+const StyledProjects = styled.div`
+  
+`
+const Title = styled.h3`
+  
+`
+const Text = styled.p`
+  
+`
+const Link = styled.a`
+  
+`
+const Image = styled.h3`
+  
+`
