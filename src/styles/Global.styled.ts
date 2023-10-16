@@ -19,6 +19,8 @@ export const GlobalStyle = createGlobalStyle`
   -moz-osx-font-smoothing: grayscale;
   color: ${theme.colors.firstTitle};
   line-height: 1.2;
+
+  min-width: 360px;
 }
 
 code {
@@ -28,6 +30,10 @@ code {
 
 a {
   text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 ul {
@@ -39,6 +45,7 @@ button {
   border: none;
 }
 section {
+  padding: 72px 0;
   background-color: ${theme.colors.background};
 }
 `

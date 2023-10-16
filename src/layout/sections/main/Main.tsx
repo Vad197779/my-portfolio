@@ -1,62 +1,27 @@
 import React from 'react'
-import styled from 'styled-components'
-import photo from '../../../assets/images/my-photo3.png'
-import { FlexWrapper } from '../../../components/FlexWrapper'
-import { Icon } from '../../../components/icon/Icon'
+import photo from '../../../assets/images/my-photo4.png'
 import { Container } from '../../../components/Container'
+import { Button } from '../../../components/Button'
+import { FlexWrapper } from '../../../components/FlexWrapper'
+import {S} from './Main_Styles'
 
-export const Main = () => {
+export const Main: React.FC = () => {
   return (
-    <StyledMain>
+    <S.Main>
       <Container>
-        <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap"}>
-          <Box>
-            <MainTitle>Software Developer</MainTitle>
-            <Name>Hello,  my name is Vadim Kovtunenko</Name>
-            <p>Short text with details about you, what you do or your professional career. You can add more information on the about page.</p>
-            <button>Projects</button>
-            <button>LinkedIn</button>
-          </Box>
-          <PhotoWrapper>
-            <Icon width={"720"} height={"629"} viewBox={"0 0 720 629"} iconId={"yellow"} />
-            <Photo src={photo} alt="" />
-          </PhotoWrapper>
-        </FlexWrapper>
+          <FlexWrapper align={"center"} justify={"space-between"} wrap={"wrap-reverse"}>
+            <S.Box>
+              <S.MainTitle>Software Developer</S.MainTitle>
+              <S.Name>Hello, my name is <span>Vadim Kovtunenko</span></S.Name>
+              <S.MainText>Short text with details about you, what you do or your professional career. You can add more information on the about page.</S.MainText>
+              <S.Link href=""><Button bgc={"#1ABCFE"} border={"2px solid #1abcfe"}>Projects</Button></S.Link>
+              <S.Link href=""><Button >LinkedIn</Button></S.Link>
+            </S.Box>
+            <S.PhotoWrapper>
+              <S.Photo src={photo} alt="" />
+            </S.PhotoWrapper>
+          </FlexWrapper>
       </Container>
-    </StyledMain>
+    </S.Main>
   )
 }
-
-const StyledMain = styled.section`
-  min-height: 100vh;
-  display: flex;
-  position: relative;
-`
-const Box = styled.div`
-position: relative;
-z-index: 2;
-  max-width: 508px;
-`
-
-const MainTitle = styled.h1`
-  
-`
-const Name = styled.h2`
-  
-`
-const PhotoWrapper = styled.div`
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 0;
-`
-
-const Photo = styled.img`
-  width: 720px;
-  height: 629px;
-  object-fit: cover;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-`
