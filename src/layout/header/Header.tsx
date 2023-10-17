@@ -9,13 +9,24 @@ import { DesktopMenu } from './desktopMenu/DesktopMenu'
 const items = ["About", "Projects", "Contacts"]
 
 export const Header: React.FC = () => {
+
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 576;
+
+  React.useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth)
+    window.addEventListener("resize", handleWindowResize);
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
   return (
     <S.Header>
       <Container>
         <FlexWrapper justify={"space-between"} align={"center"}>
           <Logo />
-          <DesktopMenu menuItems={items}/>
-          <MobileMenu menuItems={items}/>
+
+          {width < breakpoint ? <MobileMenu menuItems={items}/> : <DesktopMenu menuItems={items}/>}
+          
         </FlexWrapper>
       </Container>
     </S.Header>

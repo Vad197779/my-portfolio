@@ -28,6 +28,10 @@ const Link = styled.a`
     transform: scale3d(1.2, 1.2, 1.2);
     transition: transform 0.2s ease-in-out;
   }
+
+  @media ${theme.media.mobile} {
+    ${font({family: "'Raleway', sans-serif", color: theme.colors.firstTitle, Fmax: 80, Fmin: 30, weight: 500})}
+  }
 `
 export const S = {
   Menu,

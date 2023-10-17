@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import styled, { css } from 'styled-components';
 import { theme } from '../../../styles/Theme';
-import { font } from '../../../styles/Common';
+import { Menu } from '../../../components/menu/Menu';
 
 export const MobileMenu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
   const [menuIsOpen, setMenuIsOpen] = useState(false)
@@ -13,15 +13,7 @@ export const MobileMenu: React.FC<{menuItems: Array<string>}> = (props: {menuIte
       </BurgerButton>
 
       <MobileMenuPopup isOpen={menuIsOpen} onClick={() => {setMenuIsOpen(false)}}>
-        <ul>
-          {props.menuItems.map((item, index) => {
-            return(
-              <ListItem key={index}>
-                <Link href="">{item}</Link>
-              </ListItem>
-            )
-          })}
-        </ul>
+      <Menu menuItems={props.menuItems}/>
       </MobileMenuPopup>
     </StyledMobileMenu>
   );
@@ -113,21 +105,4 @@ const MobileMenuPopup = styled.div<{isOpen: boolean}>`
   }
 `
 
-const ListItem = styled.li`
-  
-`
-const Link = styled.a`
-  display: block;
-  transition: transform 0.2s ease-in-out;
-  ${font({family: "'Raleway', sans-serif", color: theme.colors.firstTitle, Fmax: 80, Fmin: 30, weight: 500})}
-
-  &:hover {
-    background-image: linear-gradient(130deg, #0c41ac 10%, #2d9b1a 60%, #367ec1 80%);
-    color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    transform: scale3d(1.2, 1.2, 1.2);
-    transition: transform 0.2s ease-in-out;
-  }
-`
 
