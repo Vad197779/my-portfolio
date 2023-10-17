@@ -49,7 +49,6 @@ const Link = styled.a`
 
 const PhotoWrapper = styled.div`
   position: relative;
-  margin-bottom: 20px;
 
   &::before {
     content: "";

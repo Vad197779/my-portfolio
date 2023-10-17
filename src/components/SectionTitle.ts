@@ -3,7 +3,7 @@ import { theme } from "../styles/Theme";
 
 export const SectionTitle = styled.h2`
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 70px;
   font-family: 'Playfair Display', sans-serif;
   font-size: 48px;
   font-weight: 700;
@@ -22,5 +22,9 @@ export const SectionTitle = styled.h2`
     bottom: -4px;
     left: 50%;
     transform: translateX(-50%);
+  }
+
+  @media ${theme.media.mobile} {
+    margin-bottom: 50px;
   }
 `

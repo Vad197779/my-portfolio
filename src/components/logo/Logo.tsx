@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { theme } from '../../styles/Theme';
 import { font } from '../../styles/Common';
 
-export const Logo = () => {
+export const Logo: React.FC = () => {
   return (
     <Link href="#">
       <Icon width={"23"} height={"23"} viewBox={"0 0 23 23"} iconId={'logo'}/>

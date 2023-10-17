@@ -39,7 +39,7 @@ export const Skills: React.FC = () => {
         <SectionTitle>Skills</SectionTitle>
         <FlexWrapper wrap={"wrap"} justify={"space-evenly"} gap={"74px"}>
           {skillData.map((s) => {
-            return <Skill iconId={s.iconId}/>
+            return <Skill iconId={s.iconId} />
           })}
           
         </FlexWrapper>

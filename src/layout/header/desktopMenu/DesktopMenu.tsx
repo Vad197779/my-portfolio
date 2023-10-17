@@ -1,9 +1,9 @@
 import React from 'react'
-import {S} from './Menu_Styles'
+import {S} from './DesktopMenu_Styles'
 
-export const Menu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
+export const DesktopMenu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Array<string>}) => {
   return (
-    <S.Menu>
+    <S.DesktopMenu>
       <ul>
         {props.menuItems.map((item, index) => {
           return(
@@ -13,6 +13,6 @@ export const Menu: React.FC<{menuItems: Array<string>}> = (props: {menuItems: Ar
           )
         })}
       </ul>
-    </S.Menu>
+    </S.DesktopMenu>
   );
 }
