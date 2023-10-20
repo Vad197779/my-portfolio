@@ -7,11 +7,12 @@ type ProjectPropsType = {
   text: string
   src: string
   link: string
+  even: boolean
 }
 
 export const Project: React.FC<ProjectPropsType> = (props: ProjectPropsType) => {
   return (
-    <S.Project>
+    <S.Project even={props.even}>
       <S.ProjectBox>
         <S.Title>{props.title}</S.Title>
         <S.Text>{props.text}</S.Text>

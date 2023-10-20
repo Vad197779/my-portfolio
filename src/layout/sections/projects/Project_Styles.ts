@@ -1,11 +1,11 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 import { theme } from "../../../styles/Theme"
 import { font } from "../../../styles/Common"
 
 const Projects = styled.section`
   
 `
-const Project = styled.div`
+const Project = styled.div<{ even: boolean }>`
   max-width: 992px;
   min-height: 526px;
   width: 100%;
@@ -15,17 +15,23 @@ const Project = styled.div`
   overflow: hidden;
   box-shadow: 0px 6px 64px 0px rgba(112, 144, 176, 0.10);
 
-  &:nth-child(even) {
+  ${props => props.even && css`
     flex-direction: row-reverse;
-  }
+  `}
+
+  /* &:nth-child(even) {
+    flex-direction: row-reverse;
+  } */
 
   @media ${theme.media.tablet} {
     max-width: 496px;
     flex-direction: column;
-
-    &:nth-child(even) {
+    ${props => props.even && css`
       flex-direction: column;
-    }
+    `}
+    /* &:nth-child(even) {
+      flex-direction: column;
+    } */
   }
 `
 const ProjectBox = styled.div`
