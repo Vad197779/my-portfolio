@@ -48,8 +48,8 @@ section {
   padding: 50px 0;
   background-color: ${theme.colors.background};
 
-  @media ${theme.media.mobile} {
+  /* @media ${theme.media.mobile} {
     padding: 30px 0;
-  }
+  } */
 }
 `

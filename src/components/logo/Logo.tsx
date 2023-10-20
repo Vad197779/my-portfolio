@@ -3,10 +3,11 @@ import { Icon } from '../icon/Icon';
 import styled from 'styled-components';
 import { theme } from '../../styles/Theme';
 import { font } from '../../styles/Common';
+import { animateScroll as scroll } from 'react-scroll';
 
 export const Logo: React.FC = () => {
   return (
-    <Link href="#">
+    <Link onClick={() => {scroll.scrollToTop()}}>
       <Icon width={"23"} height={"23"} viewBox={"0 0 23 23"} iconId={'logo'}/>
       <Title>Vadim Kovtunenko</Title>
     </Link>

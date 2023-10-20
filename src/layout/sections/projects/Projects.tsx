@@ -7,6 +7,7 @@ import Project2 from '../../../assets/images/proj2.png'
 import Project3 from '../../../assets/images/proj3.jpeg'
 import { Container } from '../../../components/Container'
 import {S} from './Project_Styles'
+import { Zoom } from "react-awesome-reveal";
 
 const projectData = [
   {
@@ -31,16 +32,18 @@ const projectData = [
 
 export const Projects: React.FC = () => {
   return (
-    <S.Projects>
+    <S.Projects id={"Projects"}>
       <Container>
         <SectionTitle>Projects</SectionTitle>
         <FlexWrapper direction={"column"} align={"center"} gap={"80px"}>
-          {projectData.map((p) => {
-            return <Project title={p.title}
-                            link={p.link}
-                            src={p.src}
-                            text={p.text}/>
-          })}
+          <Zoom cascade={true} damping={0.1} delay={0.1}>
+            {projectData.map((p) => {
+              return <Project title={p.title}
+                              link={p.link}
+                              src={p.src}
+                              text={p.text}/>
+            })}
+          </Zoom>
         </FlexWrapper>
       </Container>
     </S.Projects>

@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { theme } from "../../../styles/Theme"
 import { font } from "../../../styles/Common"
 import photoBg from '../../../assets/images/linear-bg.svg'
+import Link from "react-scroll/modules/components/Link"
 
 const Main = styled.section`
   overflow: hidden;
@@ -22,6 +23,10 @@ const MainTitle = styled.h1`
   ${font({color: theme.colors.accent, Fmax: 20, Fmin: 16, weight: 700})}
   text-transform: uppercase;
   margin-bottom: 12px;
+
+  p {
+    display: none;
+  }
 `
 const Name = styled.h2`
   span {
@@ -41,10 +46,13 @@ const MainText = styled.p`
   }
 `
 
-const Link = styled.a`
+const ProjectLink = styled(Link)`
   &:not(:last-child) {
     margin-right: 20px;
   }
+`
+const LinkedinLink = styled.a`
+  
 `
 
 const PhotoWrapper = styled.div`
@@ -79,7 +87,8 @@ export const S = {
   MainTitle,
   Name,
   MainText,
-  Link,
+  ProjectLink,
+  LinkedinLink,
   PhotoWrapper,
   Photo
 }

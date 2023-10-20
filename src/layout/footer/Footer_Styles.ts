@@ -32,6 +32,16 @@ const SocialItem = styled.li`
     color: ${theme.colors.accent};
     transform: scale3d(1.2, 1.2, 1.2);
     transition: transform 0.2s ease-in-out;
+
+    a {
+      transform: rotate(15deg);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+
+  &:active {
+    transform: scale3d(0.7, 0.7, 0.7);
+    transition: transform 0.2s ease-in-out;
   }
 `
 const SocialLink = styled.a`

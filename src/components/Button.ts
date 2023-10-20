@@ -27,4 +27,11 @@ export const Button = styled.button<ButtonPropsType>`
     transform: scale3d(1.1, 1.1, 1.1);
     transition: transform 0.2s ease-in-out;
   }
+
+  &:active {
+    transform: scale3d(0.7, 0.7, 0.7);
+    transition: transform 0.2s ease-in-out;
+    background-image: none;
+    color: ${theme.colors.firstTitle};
+  }
 `

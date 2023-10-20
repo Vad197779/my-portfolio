@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const Header = styled.header`
   background-color: transparent;
+  transition: background-color 0.3s ease;
   position: fixed;
   padding: 15px 0;
   top: 0;
