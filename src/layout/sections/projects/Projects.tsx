@@ -14,19 +14,19 @@ const projectData = [
     title: "My First Project",
     link: "https://vad197779.github.io/portfolio/",
     src: Project1,
-    text: "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example."
+    text: "This is my first project thanks to which I realized that I want to develop in web development."
   },
   {
-    title: "Funny",
+    title: "GoCorona",
     link: "https://vad197779.github.io/GoCona/",
     src: Project2,
-    text: "What was your role, your deliverables, if the project was personal, freelancing."
+    text: "I made this project after watching the master class. A good experience, thanks to this master class, I realized that it is necessary to constantly learn."
   },
   {
     title: "React project",
     link: "https://vad197779.github.io/portfolio-start-project-main",
     src: Project3,
-    text: "You can also add in this description the type of the project, if it was for web, mobile, electron."
+    text: "In this project, using the React framework, I made my second portfolio. I really enjoyed this experience. And I realized that I wanted to study libraries and frameworks even more and improve my skills."
   },
 ]
 

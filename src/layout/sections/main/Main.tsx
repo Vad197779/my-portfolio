@@ -15,18 +15,18 @@ export const Main: React.FC = () => {
             <Fade cascade={true} damping={0.2} direction='left' delay={0.1}>
               <S.Box>
                 <S.MainTitle>
-                  <p>Software Developer</p>
+                  <p>Web Developer</p>
                   <Typewriter
                     options={{
-                        strings: ['Software Developer'],
+                        strings: ['Web Developer'],
                         autoStart: true,
                         loop: true,
                         delay: 100
                       }}
                     />
                 </S.MainTitle>
-                <S.Name>Hello, my name is <span>Vadim Kovtunenko</span></S.Name>
-                <S.MainText>Short text with details about you, what you do or your professional career. You can add more information on the about page.</S.MainText>
+                <S.Name>Hello, i'm <span>Vadim Kovtunenko</span></S.Name>
+                <S.MainText>I'm web developer with experience in creating SPA using React, React-Router-Dom, TypeScript, JavaScript, SCSS, HTML. Now I am improving my skills in this direction and expanding them with new technologies.</S.MainText>
                 <S.ProjectLink
                   to={"Projects"}
                   smooth={true}
